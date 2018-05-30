@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Calculator" verbose="1" parallel="true" thread-count="4">
+
+
+<test name="Trigonometry">
+    <groups>
+        <run>
+            <include name="Tri"></include>
+        </run>
+    </groups>
+    <classes>
+        <class name="TestNG.CosDoubleTest"></class>
+        <class name="TestNG.SinDoubleTest"></class>
+        <class name="TestNG.TgDoubleTest"></class>
+        <class name="TestNG.CtgDoubleTest"></class>
+    </classes>
+</test>
+
+    <test name="PosAndNeg">
+        <classes>
+            <class name="TestNG.IsNegativeTest"></class>
+            <class name="TestNG.isPositiveTest"></class>
+        </classes>
+    </test>
+</suite>
