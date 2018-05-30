@@ -1,7 +1,9 @@
-package TestNG;
+package JUnit;
 
-import com.epam.tat.module4.*;
-import org.testng.annotations.*;
+import com.epam.tat.module4.Calculator;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+
 
 public class BaseCalcTest {
 
@@ -18,12 +20,5 @@ public class BaseCalcTest {
     System.out.println("End of method");
     }
 
-    @DataProvider(name = "TrigonometryDp")
-    public static Object[][] TrigonometryDp() {
-        return new Object[][]{
-                {2},
-                {0},
-                {-3.14}
-        };
-    }
+
 }

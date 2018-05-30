@@ -1,7 +1,7 @@
-package TestNG;
+package JUnit;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class DivDoubleTest extends BaseCalcTest {
 
@@ -11,14 +11,12 @@ public class DivDoubleTest extends BaseCalcTest {
     public void testLongDiv() {
         double result = calculator.div(3.0, 2.0);
         expected=3.0/2.0;
-        Assert.assertEquals(result, expected);
+        Assert.assertEquals( expected, result, 0);
     }
 
-    @Test(expectedExceptions = NumberFormatException.class)
+    @Test(expected = NumberFormatException.class)
     public void checkDivisionByZeroThrowsException()
     {
         calculator.div(3.0,0.0);
     }
-
-
 }
